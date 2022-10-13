@@ -9,6 +9,8 @@ def evaluate(img,img_recon):
     psnr = peak_signal_noise_ratio(img,abs(img_recon),data_range=img.max()-img.min())
     ssim_value = ssim(img, img_recon, data_range=img_recon.max()-img_recon.min())
     mse = mean_squared_error(img, abs(img_recon))
+
+    
     print("PSNR = {}".format(psnr))
     print("SSIM = {}".format(ssim_value))
     print("MSE = {}".format(mse))
